@@ -20,7 +20,9 @@ function App() {
           </Route>
           <Route exact path="/attraction" element= { <AttractionList /> }>
          </Route>
-         <Route element= { <PageNotFound/> }></Route>
+         <Route element= { <PageNotFound/> }>
+          
+         </Route>
      </Routes>
      </div>
     </Router>
