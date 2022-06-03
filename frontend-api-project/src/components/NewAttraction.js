@@ -6,8 +6,19 @@ const NewAttraction = () => {
     const handleChange = e => {
         setName(e.target.value)
     }
-    const handleSubmit = e => {
-        e.preventDefaul()
+    const handleSubmit = async e => {
+        e.preventDefaul();
+        const headers = {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+        const body = {name: name }
+        const options = {
+            method: "POST",
+            headers,
+            body: JSON.stringify(body)
+        }
+        const resp = await fetch('http://localhost:9292/attraction', options)
     }
 
   return (
