@@ -8,6 +8,7 @@ import DestinationList from './components/DestinationList';
 import PageNotFound from './components/PageNotFound';
 
 function App() {
+
   return (
     <Router>
       <div className="App">
