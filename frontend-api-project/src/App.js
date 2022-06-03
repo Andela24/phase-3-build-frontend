@@ -18,12 +18,12 @@ function App() {
       <Routes>
           <Route exact path="/" element= { <Home /> }>
           </Route>
-          <Route exact path="/attraction/new" element={ <NewAttraction />} >
-          </Route>
           <Route exact path="/destination" element= { <DestinationList /> }>
           </Route>
           <Route exact path="/attraction" element= { <AttractionList /> }>
          </Route>
+         <Route exact path="/attraction/new" element={ <NewAttraction />} >
+          </Route>
          <Route element= { <PageNotFound/> }>
           
          </Route>
