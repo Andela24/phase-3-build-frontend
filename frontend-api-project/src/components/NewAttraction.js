@@ -6,14 +6,17 @@ const NewAttraction = () => {
     const handleChange = e => {
         setName(e.target.value)
     }
+    const handleSubmit = e => {
+        e.preventDefaul()
+    }
 
   return (
     <div>
       <h1>New Attraction</h1>
-      <form>
+      <form onSubmit={ handleSubmit }>
           <div>
-              <label>Attraction Name: </label>
-              <input type="text" value={ name } onChange={ handleChange }/>
+              <label htmlFor='name'>Attraction Name: </label>
+              <input type="text" id='name' value={ name } onChange={ handleChange } autoFocus={ true }/>
           </div>
         <br />
           <input type="submit" value="Create Attraction"/>
