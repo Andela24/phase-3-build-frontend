@@ -5,7 +5,7 @@ const DestinationList = () => {
     const [ destinations, setDestinations ] = useState([]);
 
     useEffect( ()=> {
-      fetch('http://localhost:9393/destinations')
+      fetch('http://localhost:9292/destination')
         .then(resp => resp.json())
         .then(data => setDestinations(data))
     },[])

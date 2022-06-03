@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import AttractionList from './components/AttractionList';
 import DestinationList from './components/DestinationList';
 import PageNotFound from './components/PageNotFound';
+import NewAttraction from './components/NewAttraction';
 
 function App() {
 
@@ -16,6 +17,8 @@ function App() {
       <NavBar />
       <Routes>
           <Route exact path="/" element= { <Home /> }>
+          </Route>
+          <Route exact path="/attraction/new" element={ <NewAttraction />} >
           </Route>
           <Route exact path="/destination" element= { <DestinationList /> }>
           </Route>
