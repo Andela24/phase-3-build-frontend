@@ -18,7 +18,9 @@ const NewAttraction = () => {
             headers,
             body: JSON.stringify(body)
         }
-        const resp = await fetch('http://localhost:9292/attraction', options)
+        const resp = await fetch('http://localhost:9292/attractions/new', options)
+        const data = await resp.json();
+        console.log(data);
     }
 
   return (
