@@ -5,7 +5,7 @@ const AttractionCard = ( { attraction } ) => {
   return (
     <li>
       <NavLink to={`/attractions/${attraction.id}`}> {attraction.name} </NavLink> 
-      {/* <p>{attraction.destination.name}</p> */}
+      {/* <p>{attraction.description}</p> */}
     </li>
   )
 }

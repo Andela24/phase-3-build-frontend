@@ -3,13 +3,13 @@ import  { useNavigate } from 'react-router-dom'
 
 const NewAttraction = () => {
     const [ name, setName ] = useState("");
-    const navigate = useNavigate;
+    const navigate = useNavigate();
 
     const handleChange = e => {
         setName(e.target.value)
     }
     const handleSubmit = async e => {
-        e.preventDefaul();
+        e.preventDefault();
         const headers = {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -20,11 +20,11 @@ const NewAttraction = () => {
             headers,
             body: JSON.stringify(body)
         }
-        await fetch('http://localhost:9292/attractions/new', options)
-        // const data = await resp.json();
-        // console.log(data);
+        const resp = await fetch('http://localhost:9292/attractions/new', options)
+        const data = await resp.json();
+        console.log(data);
 
-        navigate.push("/attractions");
+        navigate("/attraction");
 
 
         //redirect

@@ -7,7 +7,7 @@ const AttractionList = () => {
   useEffect( () => {
     fetch('http://localhost:9292/attractions')
       .then(resp => resp.json())
-      .then(data => setAttractions(data))
+      .then((data) => setAttractions(data))
   },[])
 
   const attractionCard = attractions.map((attraction, index) => <AttractionCard key= { index } attraction= { attraction }/> )

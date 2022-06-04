@@ -9,6 +9,7 @@ const NavBar = () => {
           <li><NavLink to="/destination">Destinations</NavLink></li>
           <li><NavLink to="/attraction">List Attractions</NavLink></li>
           <li><NavLink to="/attraction/new">Create New Attractions</NavLink></li>
+          {/* <li><NavLink to="/attraction/:id">Create New Attractions</NavLink></li> */}
       </ul>
     </div>
   )

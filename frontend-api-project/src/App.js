@@ -7,6 +7,7 @@ import AttractionList from './components/AttractionList';
 import DestinationList from './components/DestinationList';
 import PageNotFound from './components/PageNotFound';
 import NewAttraction from './components/NewAttraction';
+import DetailsAttraction from './components/DetailsAttraction';
 
 function App() {
 
@@ -23,6 +24,8 @@ function App() {
           <Route exact path="/attraction" element= { <AttractionList /> }>
          </Route>
          <Route exact path="/attraction/new" element={ <NewAttraction />} >
+          </Route>
+          <Route exact path="/attraction/:id" element={ <DetailsAttraction />} >
           </Route>
          <Route element= { <PageNotFound/> }>
           

@@ -3,7 +3,7 @@ import React from 'react'
 const Home = () => {
   return (
     <div>
-      <h1 class="center-align"> Welcome to Travel Planner </h1>
+      <h1 style={{ textAlign: 'center' }}> Welcome to Travel Planner </h1>
     </div>
   )
 }
