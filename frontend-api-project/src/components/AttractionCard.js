@@ -1,10 +1,12 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-const AttractionCard = () => {
+const AttractionCard = ( { attraction } ) => {
   return (
-    <div>
-      
-    </div>
+    <li>
+      <NavLink to={`/attractions/${attraction.id}`}> {attraction.name} </NavLink> 
+      {/* <p>{attraction.destination.name}</p> */}
+    </li>
   )
 }
 
