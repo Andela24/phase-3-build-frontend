@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import  { useNavigate } from 'react-router-dom'
 
 const NewAttraction = () => {
     const [ name, setName ] = useState("");
+    const navigate = useNavigate;
 
     const handleChange = e => {
         setName(e.target.value)
@@ -18,9 +20,14 @@ const NewAttraction = () => {
             headers,
             body: JSON.stringify(body)
         }
-        const resp = await fetch('http://localhost:9292/attractions/new', options)
-        const data = await resp.json();
-        console.log(data);
+        await fetch('http://localhost:9292/attractions/new', options)
+        // const data = await resp.json();
+        // console.log(data);
+
+        navigate.push("/attractions");
+
+
+        //redirect
     }
 
   return (
