@@ -10,10 +10,19 @@ const AttractionList = () => {
       .then((data) => setAttractions(data))
   },[])
 
-  const attractionCard = attractions.map((attraction, index) => <AttractionCard key= { index } attraction= { attraction } /> )
+  const deleteAttraction = async id => {
+    const resp = fetch(`http://localhost:9292/attractions/${id}`, {method: "DELETE"} )
+    const data = await resp.json();
 
+    removeAttraction( id ); //removing it from state
+    
+  }
+const removeAttraction = id => {
+  setAttractions(attractions.filter( attraction => attraction.id !== id))
+  
+}
 
-
+const attractionCard = attractions.map((attraction, index) => <AttractionCard key= { index } attraction= { attraction } deleteAttraction= { deleteAttraction }/> )
 
 return (
   <div>
