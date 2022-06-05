@@ -25,7 +25,7 @@ function App() {
          </Route>
          <Route exact path="/attraction/new" element={ <NewAttraction />} >
           </Route>
-          <Route exact path="/attraction/:id" element={ <DetailsAttraction />} >
+          <Route exact path="/attractions/:id" element={ <DetailsAttraction />} >
           </Route>
          <Route element= { <PageNotFound/> }>
           

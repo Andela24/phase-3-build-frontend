@@ -10,9 +10,9 @@ const AttractionList = () => {
       .then((data) => setAttractions(data))
   },[])
 
-  const deleteAttraction = async id => {
+  const deleteAttraction = async (e, id) => {
+    e.preventDefault();
     const resp = fetch(`http://localhost:9292/attractions/${id}`, {method: "DELETE"} )
-    const data = await resp.json();
 
     removeAttraction( id ); //removing it from state
     
