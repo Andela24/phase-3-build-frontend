@@ -6,7 +6,7 @@ const AttractionCard = ( { attraction, deleteAttraction } ) => {
  
   return (
     <li>
-      <NavLink to={`/attractions/${attraction.id}`}> {attraction.name} - <Button onClick={ (e) => deleteAttraction(e, attraction.id) }> Delete </Button></NavLink> 
+      <NavLink to={`/attractions/${attraction.id}`}> {attraction.name} - <Button variant="outlined" color="error" onClick={ (e) => deleteAttraction(e, attraction.id) }> Delete </Button></NavLink> 
     </li>
   )
 }

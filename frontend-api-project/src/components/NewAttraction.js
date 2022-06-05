@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import  { useNavigate } from 'react-router-dom'
+import TextField from '@mui/material/TextField';
 
 const NewAttraction = () => {
     const [ name, setName ] = useState("");
@@ -36,10 +37,10 @@ const NewAttraction = () => {
       <form onSubmit={ handleSubmit }>
           <div>
               <label htmlFor='name'>Attraction Name: </label>
-              <input type="text" id='name' value={ name } onChange={ handleChange } autoFocus={ true }/>
+              <TextField id="outlined-size-small" variant="outlined" type="text" size="small" value={ name } onChange={ handleChange } autoFocus={ true }/>
           </div>
         <br />
-          <input type="submit" value="Create Attraction"/>
+          <TextField color="success" type="submit" value="Create Attraction"/>
       </form>
     </div>
   )
