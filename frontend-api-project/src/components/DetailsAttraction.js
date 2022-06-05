@@ -8,12 +8,12 @@ const DetailsAttraction = () => {
 
   const { id }  = useParams();
 
-  useEffect(async () => {
-    const resp = await fetch(`http://localhost:9292/attraction/${id}`)
-    const data = await resp.json();
+  useEffect(() => {
+  fetch(`http://localhost:9292/attractions/${id}`)
+  .then(resp => resp.json())
+  .then(data => setAttractions(data))
 
-    setAttractions(data);
-    setLoading(false);
+   setLoading(false)
   }, [])
 
   if(loading) {
@@ -23,7 +23,8 @@ const DetailsAttraction = () => {
     // const attractionCards = attractions.destination.map((attraction, index) => <AttractionCard key={ index } attraction={ attraction } /> ) 
     return (
       <div>
-        <h1><NavLink to={ `/attraction/${attractions.description.id}`} >{ attractions.description }</NavLink></h1>
+        {/* <h1><NavLink to={ `/attraction/${attractions.id}/description`} >{ attractions.description }</NavLink></h1> */}
+        <h1> {attractions.name} </h1>
       </div>
     )
   }

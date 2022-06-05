@@ -10,7 +10,10 @@ const AttractionList = () => {
       .then((data) => setAttractions(data))
   },[])
 
-  const attractionCard = attractions.map((attraction, index) => <AttractionCard key= { index } attraction= { attraction }/> )
+  const attractionCard = attractions.map((attraction, index) => <AttractionCard key= { index } attraction= { attraction } /> )
+
+
+
 
 return (
   <div>
