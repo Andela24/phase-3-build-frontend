@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 const NavBar = () => {
   return (
     <div>
-      <ul>
+      <ul class="navigation">
           <li><NavLink to="/"><Button>Home</Button></NavLink></li>
           <li><NavLink to="/destination"><Button>Destinations</Button></NavLink></li>
           <li><NavLink to="/attraction"><Button>List Attractions</Button></NavLink></li>
