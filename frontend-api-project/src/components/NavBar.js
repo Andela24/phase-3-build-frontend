@@ -8,7 +8,7 @@ const NavBar = () => {
       <ul class="navigation">
           <li><NavLink to="/"><Button>Home</Button></NavLink></li>
           <li><NavLink to="/destination"><Button>Destinations</Button></NavLink></li>
-          <li><NavLink to="/attraction"><Button>List Attractions</Button></NavLink></li>
+          <li><NavLink to="/attraction"><Button>List Of Attractions</Button></NavLink></li>
           <li><NavLink to="/attraction/new"><Button>Create New Attractions</Button></NavLink></li>
       </ul>
     </div>
