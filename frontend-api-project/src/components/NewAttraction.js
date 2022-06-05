@@ -35,7 +35,7 @@ const NewAttraction = () => {
     <div>
       <h1>New Attraction</h1>
       <form onSubmit={ handleSubmit }>
-          <div>
+          <div class="label">
               <label htmlFor='name'>Attraction Name: </label>
               <TextField id="outlined-size-small" variant="outlined" type="text" size="small" value={ name } onChange={ handleChange } autoFocus={ true }/>
           </div>
