@@ -4,9 +4,9 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
 const DetailsAttraction = () => {
-  const [ attractions, setAttractions ] = useState(null);
-  const [ loading, setLoading ] = useState(true);
-  const [ isEditing, setIsEditing]= useState(false);
+  const [attractions, setAttractions] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [isEditing, setIsEditing]= useState(false);
   const [currentText, setCurrentText]= useState('');
 
   const { id }  = useParams();
@@ -44,12 +44,13 @@ const DetailsAttraction = () => {
       const data = await resp.json();
 
       setAttractions(data);
+      setIsEditing('');
     }
 
      return (
       <div>
         <h1>{attractions?.name}</h1>
-        <p>{attractions?.description}</p>
+        <p class="text">{attractions?.description}</p>
         <Button onClick={handleClick}>Edit</Button>
         {isEditing ? <><TextField id="outlined-size-small" variant="outlined" type="text" size="small" value={currentText} onChange={(e) => setCurrentText(e.target.value)}/> <Button onClick={handleSubmit}>Submit</Button> </>: null }
       
