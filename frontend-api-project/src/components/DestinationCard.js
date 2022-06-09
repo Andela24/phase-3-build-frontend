@@ -8,7 +8,8 @@ const DestinationCard = ( { destination, deleteDestination } ) => {
 
   return (
     <ul>
-     <li class="navigation"><NavLink to={`/destination/${destination.id}`}> {destination.name} - <Button variant="outlined" color="error" onClick={ (e) => deleteDestination(e, destination.id) }> Delete </Button></NavLink> </li>
+      <button className="link"> {destination.name} </button> - <Button variant="outlined" color="error" onClick={ (e) => deleteDestination(e, destination.id) }> Delete </Button>
+     {/* <li class="navigation"><NavLink to={`/destination/${destination.id}`}> {destination.name} - <Button variant="outlined" color="error" onClick={ (e) => deleteDestination(e, destination.id) }> Delete </Button></NavLink> </li> */}
     </ul>
    
   )
