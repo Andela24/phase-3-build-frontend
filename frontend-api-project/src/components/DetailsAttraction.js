@@ -50,7 +50,7 @@ const DetailsAttraction = () => {
      return (
       <div>
         <h1>{attractions?.name}</h1>
-        <p class="text">{attractions?.description}</p>
+        <p className="text">{attractions?.description}</p>
         <Button onClick={handleClick}>Edit</Button>
         {isEditing ? <><TextField id="outlined-size-small" variant="outlined" type="text" size="small" value={currentText} onChange={(e) => setCurrentText(e.target.value)}/> <Button onClick={handleSubmit}>Submit</Button> </>: null }
       
