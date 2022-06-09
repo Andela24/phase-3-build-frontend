@@ -24,6 +24,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## 🚀 Features
 * See Available Destination
+* Create New Destination
+* Delete Destination
 * Look List of All Available Attractions
 * Click on Any Attraction For More Details
 * Edit Description
@@ -34,9 +36,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ## How To Use
 1. Loads Home Page with basic picture and navigation links.
 2. See all available destinations.
-3. See the complete list of available attractions and click on any to learn more. You may also make changes to the content and add a new description.
-4. Ability to delete each attraction from the list.
-5. Ability to create new attraction.
+4. Ability to create destination.
+5. Ability to delete each destination from the list.
+6. See the complete list of available attractions and click on any to learn more. You may also make changes to the content and add a new description.
+7. Ability to delete each attraction from the list.
+8. Ability to create new attraction.
 
 ## Technologies Used
 * The system has a React frontend that connects to a SQLite backend using Active Record through Sinatra. 
