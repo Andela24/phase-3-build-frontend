@@ -14,7 +14,7 @@ const AttractionList = () => {
     e.preventDefault();
     const resp = fetch(`http://localhost:9292/attractions/${id}`, {method: "DELETE"} )
 
-    removeAttraction( id ); //removing it from state
+    removeAttraction( id );
     
   }
 const removeAttraction = id => {

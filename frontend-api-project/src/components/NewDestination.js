@@ -23,7 +23,6 @@ const NewDestination = () => {
             }
             const resp = await fetch('http://localhost:9292/destination/new', options)
             const data = await resp.json();
-            console.log(data);
     
             navigate("/destination");
         }
