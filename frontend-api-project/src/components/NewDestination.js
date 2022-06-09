@@ -35,7 +35,7 @@ const NewDestination = () => {
       <form onSubmit={ handleSubmit }>
       <div class="label">
               <label htmlFor='name'>Enter City Name: </label>
-              <TextField id="outlined-size-small" variant="outlined" type="text" size="small" value={ name } onChange={ handleChange } autoFocus= { true }/>
+              <TextField id="outlined-size-small" variant="outlined" type="text" size="small" value={name} onChange={handleChange} autoFocus= {true}/>
           </div>
         <br />
           <TextField color="success" type="submit" value="Create Destination"/>
